@@ -1,9 +1,8 @@
 class Player 
-  # keep score 
-  # choose random question && print question 
-  attr_accessor :lives
-  def initialize ()
+  attr_accessor :lives, :name
+  def initialize (n)
     @lives = 3
+    @name = n
   end
 
   def lose_life

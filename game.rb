@@ -7,7 +7,7 @@ class GameState
 
   def end_game()
     @over = true
-    puts "Game over!"
+    puts '------ GAME OVER ------'
   end
 
   def choose_question(questions)
@@ -16,11 +16,15 @@ class GameState
   end
 
   def switch_turn()
-    @player1_turn = false
+    if @player1_turn
+      @player1_turn = false
+    else 
+      @player1_turn = true
+    end
+
   end
 
   def validate(player_answer, question) 
-    puts question
     player_answer == question[:answer]
   end
 end
